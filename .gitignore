@@ -1,0 +1,8 @@
+.idea/
+stable-diffusion/outputs/
+.ipynb_checkpoints
+*.ckpt
+stable-diffusion/logs/
+*.pyc
+**/__pycache__/
+
