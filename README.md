@@ -54,7 +54,6 @@ npm install
 After this point, you should be all set up! Check out the **`Usage`** section below to learn more about how to actually run the app.
 
 ---
-
 ### **Usage**
 
 In order to run the React app, you can run the following commands from the root of the repo: 
@@ -71,6 +70,16 @@ From there, you can specify the Prompt Graph that you want to create. (More deta
 Once you're finished defining your prompt graph, click on the **Generate Configuration File** button. This will download a `.json` file containing all of the prompts you'd specified. 
 
 Finally, you should be able to run 
+
+```
+python run_generation_from_config.py
+``` 
+
+from the root of the repo. This will ask you for the path of the configuration file you want to generate; once you paste in 
+the path and hit Enter, then the generation will begin! 
+
+If you're having any trouble using the app, please reach out to me - either through [a DM on Twitter](https://twitter.com/trevbook), 
+or by starting an issue on this repo! 
 
 ---
 
