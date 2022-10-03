@@ -780,17 +780,17 @@ def prompt_graph_back_and_forth_recursion(prompt_graph_output_folder, loops=1,
         # Now that we're at the end of the loop, we can rename everything
         rename_pics_in_folder_monotonically(new_output_folder, rename_clip_latent=True)
 
-    # If the save_image_change_plot flag is True, then we'll save the image difference plot
-    if (save_image_change_plot):
-        # Generate the prompt graph image difference figure
-        plotly_fig = generate_prompt_graph_image_difference_plotly_fig(Path(new_output_folder),
-                                                                       distance_method=distance_metric)
+        # If the save_image_change_plot flag is True, then we'll save the image difference plot
+        if (save_image_change_plot):
+            # Generate the prompt graph image difference figure
+            plotly_fig = generate_prompt_graph_image_difference_plotly_fig(Path(new_output_folder),
+                                                                           distance_method=distance_metric)
 
-        # Determine what the filepath is
-        file_path = Path(new_output_folder) / Path("Frame to Frame Difference Graph.jpeg")
+            # Determine what the filepath is
+            file_path = Path(new_output_folder) / Path(f"Frame to Frame Difference Graph - Interpolation Loop {loop+1}.jpeg")
 
-        # Now, save the Plotly figure that was just created
-        plotly_fig.write_image(file_path, format="jpg", scale=3)
+            # Now, save the Plotly figure that was just created
+            plotly_fig.write_image(file_path, format="jpg", scale=3)
 
 
 # This method will create an animation at a given FPS from a Prompt Graph folder
